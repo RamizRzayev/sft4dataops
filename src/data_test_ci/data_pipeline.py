@@ -15,8 +15,6 @@ def run_sql_scripts() -> None:
 def run() -> None:
     run_sql_scripts()
 
-###
-
 
 if __name__ == '__main__':
     run()
