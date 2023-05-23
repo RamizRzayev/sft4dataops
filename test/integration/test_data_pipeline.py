@@ -13,7 +13,7 @@ class TestDataPipeline:
 
     def test_data_pipeline(self):
         run()
-        names_expected=['dept_name1','emp_name1']
+        names_expected=['dept_name','emp_name']
         with WarehouseConnection(
                 get_warehouse_creds()
         ).managed_cursor() as curr:
