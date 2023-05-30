@@ -11,6 +11,7 @@ class TestDataPipeline_dept:
     def teardown_method(self, test_data_pipeline):
         None
 
+
     def test_data_pipeline(self):
         run()
         names_expected=['id','name','location']
