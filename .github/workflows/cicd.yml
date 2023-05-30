@@ -1,6 +1,9 @@
 name: cicd
+
 on: [pull_request]
+
 jobs:
+  
   run-ci-tests:
     runs-on: ubuntu-latest
     steps:
@@ -12,9 +15,8 @@ jobs:
         run: make ci    
 
   deploy:
-    name: Deploy to EC2 on master branch push
+    name: Deploy to EC2
     runs-on: ubuntu-latest
-
     steps:
       - name: Deploy to Server EC2
         uses: easingthemes/ssh-deploy@main
