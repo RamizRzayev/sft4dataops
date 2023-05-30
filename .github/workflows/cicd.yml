@@ -1,7 +1,6 @@
 name: cicd
 
-on: 
-  pull_request:
+on:[pull_request]:
 
 jobs:
   
@@ -15,7 +14,6 @@ jobs:
       - name: Run CI test
         run: make ci    
 
-  push:
 
   deploy:
     name: Deploy to EC2
