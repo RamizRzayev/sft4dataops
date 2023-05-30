@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to Server EC2
-        uses: easingthemes/ssh-deploy@main
+        uses: easingthemes/ssh-deploy@v3.0.1
         env:
           SSH_PRIVATE_KEY: ${{secrets.EC2_SSH_KEY}}
           REMOTE_HOST: ${{secrets.HOST_DNS}}
