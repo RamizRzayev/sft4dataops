@@ -1,4 +1,4 @@
-name: ci
+name: cicd
 on: [pull_request]
 jobs:
   run-ci-tests:
@@ -9,4 +9,17 @@ jobs:
       - name: Spin up containers
         run: make up
       - name: Run CI test
-        run: make ci
+        run: make ci    
+
+  deploy:
+    name: Deploy to EC2 on master branch push
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Deploy to Server EC2
+        uses: easingthemes/ssh-deploy@main
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
+          REMOTE_HOST: ${{ secrets.HOST_DNS }}
+          REMOTE_USER: ${{ secrets.USERNAME }}
+          TARGET: ${{ secrets.TARGET_DIR }}
