@@ -14,7 +14,7 @@ class TestDataPipeline_dept:
 
     def test_data_pipeline(self):
         run()
-        names_expected=['id','name','location']
+        names_expected=['id','name','locationFAKE']
         with WarehouseConnection(
                 get_warehouse_creds()
         ).managed_cursor() as curr:
