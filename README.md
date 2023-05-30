@@ -1,4 +1,4 @@
-# Automate data testing as part of a CI pipeline
+# Automate data testing as part of a CI/CD pipeline
 
 ## Project overview
 
