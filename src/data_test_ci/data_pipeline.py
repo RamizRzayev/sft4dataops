@@ -12,7 +12,6 @@ def run_sql_scripts() -> None:
                 curr.execute(f.read())
 
 
-
 def run() -> None:
     run_sql_scripts()
 
