@@ -16,13 +16,16 @@ jobs:
 
 
   deploy:
+    needs: [run-ci-tests]
     name: Deploy to EC2
     runs-on: ubuntu-latest
     steps:
       - name: Deploy to Server EC2
-        uses: easingthemes/ssh-deploy@v3.0.1
+        uses: easingthemes/ssh-deploy@main
         env:
+
           SSH_PRIVATE_KEY: ${{secrets.EC2_SSH_KEY}}
           REMOTE_HOST: "ec2-44-210-113-104.compute-1.amazonaws.com"
           REMOTE_USER: ${{secrets.USERNAME}}
           TARGET: ${{secrets.TARGET_DIR}}
+
