@@ -15,6 +15,7 @@ jobs:
         run: make ci    
 
 
+
   deploy:
     needs: [run-ci-tests]
     name: Deploy to EC2
@@ -25,7 +26,7 @@ jobs:
         env:
 
           SSH_PRIVATE_KEY: ${{secrets.EC2_SSH_KEY}}
-          REMOTE_HOST: "ec2-44-210-113-104.compute-1.amazonaws.com"
+          REMOTE_HOST: "ec2-54-152-179-25.compute-1.amazonaws.com"
           REMOTE_USER: ${{secrets.USERNAME}}
           TARGET: ${{secrets.TARGET_DIR}}
 
