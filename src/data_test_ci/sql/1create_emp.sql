@@ -1,4 +1,5 @@
 drop table if EXISTS emp CASCADE;
+
 create table emp 
 (
  id int, 

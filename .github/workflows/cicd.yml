@@ -16,6 +16,7 @@ jobs:
 
 
   deploy:
+    needs: [run-ci-tests]
     name: Deploy to EC2
     runs-on: ubuntu-latest
     steps:
