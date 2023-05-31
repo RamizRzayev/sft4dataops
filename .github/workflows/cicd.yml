@@ -15,6 +15,7 @@ jobs:
         run: make ci    
 
 
+
   deploy:
     needs: [run-ci-tests]
     name: Deploy to EC2
