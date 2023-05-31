@@ -21,6 +21,8 @@ jobs:
     name: Deploy to EC2
     runs-on: ubuntu-latest
     steps:
+      - name: checkout repo
+        uses: actions/checkout@v2
       - name: Deploy to Server EC2
         uses: easingthemes/ssh-deploy@main
         env:
